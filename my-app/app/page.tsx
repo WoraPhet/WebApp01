@@ -122,11 +122,9 @@ export default function HomePage() {
   const [currentGif, setCurrentGif] = useState(gifs[0]);
   const [gifKey, setGifKey] = useState(0);
   const [messageIndex, setMessageIndex] = useState(0);
-  const [shuffledMessages, setShuffledMessages] = useState(messages); // no shuffle here
-
-  useEffect(() => {
-    setShuffledMessages(shuffleArray(messages));
-  }, []);
+  const [shuffledMessages, setShuffledMessages] = useState(() =>
+  shuffleArray(messages)
+);
 
   useEffect(() => {
     const gifInterval = setInterval(() => {
