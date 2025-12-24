@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import CountdownGate from "./components/CountdownGate";
 
 const gifs = [
   "/assets/sousou-no-frieren-flower-magic2.gif",
@@ -81,7 +82,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="text-3xl md:text-5xl font-bold text-[#4cb5e8] absolute inset-0 translate-x-[4px] translate-y-[4px]"
+          className="text-3xl md:text-5xl font-bold text-[#4cb5e8] absolute inset-0 translate-x-1 translate-y-1"
         >
           For Zeen, My Beloved.
         </motion.p>
@@ -96,7 +97,13 @@ export default function HomePage() {
         </motion.p>
       </div>
 
-      <div className="relative w-full h-64 md:h-[40rem] overflow-hidden mb-10">
+      <CountdownGate
+        target="2025-12-25T00:00:00+07:00"
+        href="/Christmas"
+        label="Merry Christmas 🎄"
+      />
+
+      <div className="relative w-full h-64 md:h-160 overflow-hidden mt-2 mb-10">
         <AnimatePresence mode="wait">
           <motion.div
             key={gifKey}
