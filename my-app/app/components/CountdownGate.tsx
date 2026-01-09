@@ -33,7 +33,7 @@ function getTimeLeft(targetDate: Date): TimeLeft {
 export default function CountdownGate({
   target,
   href,
-  label = "Open 🎄",
+  label = "Open 🎂",
 }: CountdownGateProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
   const [expired, setExpired] = useState(false);
@@ -68,18 +68,7 @@ export default function CountdownGate({
       >
         <Link
           href={href}
-          className="
-            inline-block
-            rounded-3xl
-            bg-white
-            px-6 py-3
-            text-red-500
-            font-semibold
-            shadow-lg
-            hover:bg-gray-100
-            hover:scale-105
-            transition
-          "
+          className="inline-block rounded-3xl bg-[#fef3c7] px-6 py-3 text-[#5b3758] font-semibold shadow-lg shadow-purple-900/20 hover:bg-white hover:scale-105 transition duration-300"
         >
           {label}
         </Link>

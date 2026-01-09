@@ -9,12 +9,12 @@ import {
 
 const playlist = [
   {
-    title: "Mariah Carey - All I Want For Christmas Is You",
-    src: "/music/Mariah Carey - All I Want For Christmas Is You.mp3",
+    title: "The Kiboomers - Happy Birthday to You",
+    src: "/music/HBD song.mp3",
   },
   {
-    title: "Mariah Carey - Santa Claus Is Comin' to Town",
-    src: "/music/Mariah Carey - Santa Claus Is Comin' to Town.mp3",
+    title: "Happy Birthday To You - THE KIBOOMERS Birthday Party Song for Kids",
+    src: "/music/Happy Birthday To You - THE KIBOOMERS Birthday Party Song for Kids.mp3",
   },
 ];
 
@@ -87,7 +87,7 @@ export default function BackgroundMusic() {
         "
       >
         {/* Song title */}
-        <div className=" text-emerald-900/70 sm:text-xs sm:text-black/70 max-w-55 text-wrap text-center sm:text-right">
+        <div className=" text-[#f3e8ff]/70 sm:text-xs sm:text-[#f3e8ff]/70 max-w-55 text-wrap text-center sm:text-right">
           🎶 {playlist[current].title}
         </div>
 
@@ -104,7 +104,7 @@ export default function BackgroundMusic() {
           {/* Play / Pause */}
           <button
             onClick={() => setPlaying((p) => !p)}
-            className="text-emerald-800 sm:text-white hover:scale-110 transition"
+            className="text-[#5b3758] sm:text-white hover:scale-110 transition"
             aria-label={playing ? "Pause music" : "Play music"}
           >
             {playing ? (

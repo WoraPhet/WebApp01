@@ -98,10 +98,16 @@ export default function HomePage() {
       </div>
 
       <CountdownGate
+        target="2026-01-10T00:00:00+07:00"
+        href="/HBD"
+        label="🎂Happy 23rd Birthday!"
+      />
+
+      {/* <CountdownGate
         target="2025-12-25T00:00:00+07:00"
         href="/Christmas"
         label="Merry Christmas 🎄"
-      />
+      /> */}
 
       <div className="relative w-full h-64 md:h-160 overflow-hidden mt-2 mb-10">
         <AnimatePresence mode="wait">
